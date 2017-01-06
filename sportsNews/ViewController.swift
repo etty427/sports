@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -74,6 +74,19 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         
         return self.articles?.count ?? 0
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        let webVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "web") as! WebviewVC
+        
+        webVC.url = self.articles?[indexPath.item].url
+        
+        self.present(webVC, animated: false, completion: nil)
+
+        
+       
+    }
+
 }
 
 extension UIImageView {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -29,6 +29,9 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ff8-tq-Icu">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="barTintColor" red="0.045528882467840481" green="0.3054825074230888" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Sports News" id="zfX-of-hbE"/>
                                 </items>
@@ -41,7 +44,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="203"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uA5-sz-R5F" id="RJL-T4-GRU">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="202"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="203"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ugK-Bf-Dyw">
@@ -93,6 +96,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="jvp-uR-7rU"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="q6n-z4-Dbt"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -118,6 +122,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--WebviewVC-->
+        <scene sceneID="kwI-CB-IPV">
+            <objects>
+                <viewController storyboardIdentifier="web" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LYC-0n-4zz" customClass="WebviewVC" customModule="sportsNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S1Y-r3-9bK"/>
+                        <viewControllerLayoutGuide type="bottom" id="HPm-9D-DyM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Ue-yw-gIn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UvF-XJ-2Th">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Sports News" id="8oR-v5-SmN">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="WWV-HT-P2L">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="MIF-dE-Rw9"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aa5-eb-tSh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                <color key="backgroundColor" red="1" green="0.77616317810000002" blue="0.060070186409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="0.77616317810000002" blue="0.060070186409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gD7-5I-peq">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gD7-5I-peq" secondAttribute="trailing" id="3AY-8A-Kk3"/>
+                            <constraint firstItem="aa5-eb-tSh" firstAttribute="top" secondItem="6Ue-yw-gIn" secondAttribute="top" id="40b-DE-YZv"/>
+                            <constraint firstItem="HPm-9D-DyM" firstAttribute="top" secondItem="gD7-5I-peq" secondAttribute="bottom" id="Dd9-sZ-dyg"/>
+                            <constraint firstItem="UvF-XJ-2Th" firstAttribute="top" secondItem="S1Y-r3-9bK" secondAttribute="bottom" id="HNi-Ks-3cp"/>
+                            <constraint firstItem="gD7-5I-peq" firstAttribute="top" secondItem="UvF-XJ-2Th" secondAttribute="bottom" id="Lfb-Gi-ac2"/>
+                            <constraint firstItem="UvF-XJ-2Th" firstAttribute="leading" secondItem="6Ue-yw-gIn" secondAttribute="leading" id="Liy-5s-NUA"/>
+                            <constraint firstAttribute="trailing" secondItem="aa5-eb-tSh" secondAttribute="trailing" id="PY6-SP-SR9"/>
+                            <constraint firstItem="aa5-eb-tSh" firstAttribute="leading" secondItem="6Ue-yw-gIn" secondAttribute="leading" id="QPW-P7-1AZ"/>
+                            <constraint firstAttribute="trailing" secondItem="UvF-XJ-2Th" secondAttribute="trailing" id="gbT-Kt-iTL"/>
+                            <constraint firstItem="gD7-5I-peq" firstAttribute="leading" secondItem="6Ue-yw-gIn" secondAttribute="leading" id="jJG-39-7ix"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="gD7-5I-peq" id="LED-63-ScT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TZi-iy-wtA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="890" y="139"/>
         </scene>
     </scenes>
 </document>
