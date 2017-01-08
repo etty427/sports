@@ -13,6 +13,7 @@ class menuMonitor: NSObject, UITableViewDelegate, UITableViewDataSource {
     let blackView = UIView()
     let menuTableView = UITableView()
     let arrayOfSources = ["TechCrunch","TechRadar"]
+    var mainVC: ViewController?
     
     public func showMenu() {
     if let window = UIApplication.shared.keyWindow {
@@ -65,6 +66,13 @@ class menuMonitor: NSObject, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let vc = mainVC {
+            vc.source = arrayOfSources[indexPath.item].lowercased()
+            vc.fetchArticles(fromSource: arrayOfSources[indexPath.item].lowercased())
+            dismissMenu()
+        }
     }
     
     override init() {
