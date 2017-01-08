@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2858D4801E209B2B002767FA /* menuMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2858D47F1E209B2B002767FA /* menuMonitor.swift */; };
+		2858D4821E21CE0E002767FA /* BaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2858D4811E21CE0E002767FA /* BaseCell.xib */; };
+		2858D4841E21D230002767FA /* BaseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2858D4831E21D230002767FA /* BaseViewCell.swift */; };
 		28B86F701E1C9FD600066715 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B86F6F1E1C9FD600066715 /* AppDelegate.swift */; };
 		28B86F721E1C9FD600066715 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B86F711E1C9FD600066715 /* ViewController.swift */; };
 		28B86F751E1C9FD600066715 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28B86F731E1C9FD600066715 /* Main.storyboard */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2858D47F1E209B2B002767FA /* menuMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuMonitor.swift; sourceTree = "<group>"; };
+		2858D4811E21CE0E002767FA /* BaseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseCell.xib; sourceTree = "<group>"; };
+		2858D4831E21D230002767FA /* BaseViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewCell.swift; sourceTree = "<group>"; };
 		28B86F6C1E1C9FD600066715 /* sportsNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sportsNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B86F6F1E1C9FD600066715 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28B86F711E1C9FD600066715 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +75,9 @@
 				28B86F7B1E1C9FD700066715 /* Info.plist */,
 				28B86F811E1CA53500066715 /* ArticleCell.swift */,
 				28B86F831E1CA6DF00066715 /* Article.swift */,
+				2858D47F1E209B2B002767FA /* menuMonitor.swift */,
+				2858D4811E21CE0E002767FA /* BaseCell.xib */,
+				2858D4831E21D230002767FA /* BaseViewCell.swift */,
 			);
 			path = sportsNews;
 			sourceTree = "<group>";
@@ -100,7 +109,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Rainman Technologies";
 				TargetAttributes = {
 					28B86F6B1E1C9FD600066715 = {
@@ -133,6 +142,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2858D4821E21CE0E002767FA /* BaseCell.xib in Resources */,
 				28B86F7A1E1C9FD700066715 /* LaunchScreen.storyboard in Resources */,
 				28B86F771E1C9FD600066715 /* Assets.xcassets in Resources */,
 				28B86F751E1C9FD600066715 /* Main.storyboard in Resources */,
@@ -147,8 +157,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				28EB39701E1F6AD400959E65 /* WebviewVC.swift in Sources */,
+				2858D4841E21D230002767FA /* BaseViewCell.swift in Sources */,
 				28B86F841E1CA6DF00066715 /* Article.swift in Sources */,
 				28B86F821E1CA53500066715 /* ArticleCell.swift in Sources */,
+				2858D4801E209B2B002767FA /* menuMonitor.swift in Sources */,
 				28B86F721E1C9FD600066715 /* ViewController.swift in Sources */,
 				28B86F701E1C9FD600066715 /* AppDelegate.swift in Sources */,
 			);
@@ -194,6 +206,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -244,6 +257,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

@@ -23,7 +23,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func fetchArticles() {
         
-        let urlRequest = URLRequest(url: URL(string: "https://newsapi.org/v1/articles?source=nfl-news&sortBy=latest&apiKey=722c05c77ee94c99bb4d8d5e18dedddc")!)
+        let urlRequest = URLRequest(url: URL(string: "https://newsapi.org/v1/articles?source=nfl-news&sortBy=top&apiKey=722c05c77ee94c99bb4d8d5e18dedddc")!)
         
         let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             
@@ -83,9 +83,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         self.present(webVC, animated: false, completion: nil)
 
+        }
+    let menuManager = menuMonitor()
+    @IBAction func buttonPressed(_ sender: Any) {
         
-       
+        menuManager.showMenu()
+        
     }
+    
 
 }
 
